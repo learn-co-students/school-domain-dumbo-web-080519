@@ -18,7 +18,7 @@ class School
             roster[grade] = []
             roster[grade] << name
         end
-        @roster.sort
+        roster.sort
     end
 
     def grade(grade)
@@ -28,7 +28,7 @@ class School
     def sort
         #sort array isnt consistent with simpsons test?
         roster.map{ |grade, students_array|
-            students_array.sort
+             students_array.sort!
         }
         roster.sort.to_h
     end
