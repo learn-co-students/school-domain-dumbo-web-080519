@@ -1,13 +1,14 @@
-# code here!
-
 class School
 
-  attr_reader :name, :roster
   def initialize(roster)
     @roster = {}
   end
 
-  
+  def roster #attr_reader
+    @roster
+  end
+
+
 
   def add_student(name,grade)
     if @roster.has_key?(grade)
@@ -18,8 +19,7 @@ class School
   end
 
   def grade(grade)
-    roster_hash = self.roster
-    roster_hash[grade]
+    self.roster[grade]
   end
 
   def sort
